@@ -10,8 +10,11 @@
     "author": "vitlyc",
     "license": "MIT",
     "dependencies": {
+        "body-parser": "^1.20.0",
+        "colors": "^1.4.0",
         "dotenv": "^16.0.0",
         "express": "^4.17.3",
+        "mongoose": "^6.2.9",
         "morgan": "^1.10.0"
     },
     "devDependencies": {
