@@ -10,6 +10,7 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 // app.use(logger);
+// heroku
 app.use("/api/v1/bootcamps", bootcamps);
 
 app.get("/test", (req, res) => {
