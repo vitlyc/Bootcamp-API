@@ -22,8 +22,6 @@ app.use(errorHandler);
 
 app.get("/test", (req, res) => {
   res.status(405).send("hi");
-  console.log(process.env.PORT);
-  console.log(process.env.MONGO_URI);
 });
 const server = app.listen(
   PORT,
