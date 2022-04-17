@@ -30,8 +30,6 @@ exports.register = asyncHandler(async (req, res, next) => {
 // @route     POST /api/v1/auth/login
 // @access    Public
 exports.login = asyncHandler(async (req, res, next) => {
-  console.log("hi");
-
   const { email, password } = req.body;
 
   // Validate email and password
@@ -72,7 +70,6 @@ exports.logout = asyncHandler(async (req, res, next) => {
 // @route     POST /api/v1/auth/me
 // @access    Private
 exports.getMe = asyncHandler(async (req, res, next) => {
-  console.log("tut");
   const user = await User.findById(req.user.id);
 
   res.status(200).json({
@@ -86,9 +83,11 @@ exports.getMe = asyncHandler(async (req, res, next) => {
 // @access    Public
 exports.forgotPassword = asyncHandler(async (req, res, next) => {
   const user = await User.findOne({ email: req.body.email });
+
   if (!user) {
     return next(new ErrorResponse("There is no user with that email", 404));
   }
+
   // Get reset token
   const resetToken = user.getResetPasswordToken();
 
@@ -102,7 +101,6 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
   const message = `You are receiving this email because you (or someone else) has requested the reset of a password. Please make a PUT request to: \n\n ${resetUrl}`;
 
   try {
-    console.log("tut");
     await sendEmail({
       email: user.email,
       subject: "Password reset token",
@@ -120,10 +118,10 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
     return next(new ErrorResponse("Email could not be sent", 500));
   }
 
-  res.status(200).json({
-    success: true,
-    data: user,
-  });
+  // res.status(200).json({
+  //   success: true,
+  //   data: user,
+  // });
 });
 
 // @desc      Reset password
@@ -179,7 +177,6 @@ exports.updateDetails = asyncHandler(async (req, res, next) => {
 // @access    Private
 exports.updatePassword = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.user.id).select("+password");
-  console.log(req.body);
   // Check current password
   if (!(await user.matchPassword(req.body.currentPassword))) {
     return next(new ErrorResponse("Password is incorrect", 401));
