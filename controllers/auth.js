@@ -1,7 +1,7 @@
 const ErrorResponse = require("../utils/errorResponse");
 const crypto = require("crypto");
 const User = require("../models/User");
-const asyncHandler = require("../middleware/assync");
+const asyncHandler = require("../middleware/async");
 const geocoder = require("../utils/geocoder");
 const sendEmail = require("../utils/sendEmail");
 
