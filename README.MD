@@ -1,5 +1,5 @@
-# [Bootcamp-API] (https://devcamp-back.herokuapp.com/)
-
+# [Bootcamp-API](https://devcamp-back.herokuapp.com)
+---
 ### REST API:
 API позволяет создавать учебные лагеря со своими курсами, написанием ревью. Регистрировать/авторизовывать пользователей (bearer token и cookie). config/Devcamper API.postman_collection.json - коллекция запросов для импорта в Postman.
 ___
