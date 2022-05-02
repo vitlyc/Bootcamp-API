@@ -8,9 +8,10 @@ ___
 
 #### Стек:
 
-![HTML5](https://img.shields.io/badge/-HTML5-141130?style=flat-square&logo=HTML5&logoColor=FF0000)
-![CSS3](https://img.shields.io/badge/-CSS3-141130?style=flat-square&logo=CSS3&logoColor=009900)
-![JavaScript](https://img.shields.io/badge/-JavaScript-141130?style=flat-square&logo=JavaScript&logoColor=yellow)
-![React](https://img.shields.io/badge/-React-141130?style=flat-square&logo=React&)
+![JavaScript](https://img.shields.io/badge/-JavaScript-141130?style=for-the-badge&logo=JavaScript&logoColor=yellow)
+![Node.js](https://img.shields.io/badge/-Node.js-141130?style=for-the-badge&logo=Node.js)
+![Express](https://img.shields.io/badge/-Express-141130?style=for-the-badge&logo=Express)
+![MongoDB](https://img.shields.io/badge/-MongoDB-141130?style=for-the-badge&logo=MongoDB)
+![API](https://img.shields.io/badge/-API-141130?style=for-the-badge)
 
 ---
